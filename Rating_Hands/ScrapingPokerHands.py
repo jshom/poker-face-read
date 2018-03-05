@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import pickle
 from os import listdir, remove
 
-def scape_and_pickle_hands(hands = []):
+def scape_and_pickle_hands():
 	resp = requests.get('https://www.tightpoker.com/poker_hands.html')
 	soup = BeautifulSoup(resp.content, 'html.parser')
 
