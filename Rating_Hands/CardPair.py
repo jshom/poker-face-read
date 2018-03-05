@@ -11,17 +11,12 @@ class CardPair():
 	def __init__(self, cards = []):
 		#Cards in terms of['card pair', bool: same suit]
 		self.cards = cards
-		# print(self.hands)
-
+		
 	def get_cards(self):
 		return self.cards
 
-	def give_rank(self):
+	def get_rank(self):
 		for i in range(len(self.hands)):
 			if self.hands[i][0]==self.cards[0] and self.hands[i][2]==self.cards[1]:
 				return self.hands[i][1]
 		return "Nothing Found"
-
-
-a = CardPair(["AK", True])
-print(a.give_rank())
